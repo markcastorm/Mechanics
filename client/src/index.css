@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap');
+
+/* Custom font override to match the aesthetic closer if system fonts aren't enough */
+.font-serif-custom {
+  font-family: 'Playfair Display', serif;
+}
+.font-sans-custom {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Subtle reveal animation for text */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal {
+  animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom animation delays */
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF5C39;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7050;
+}
+
+/* Prevent text selection on navbar during transitions */
+nav * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Performance optimizations for animations */
+.transition-all,
+.transition-opacity,
+.transition-transform {
+  will-change: transform, opacity;
+}
+
+/* Scroll-triggered slide up animation */
+.animate-slide-up-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
