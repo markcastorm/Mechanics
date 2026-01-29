@@ -45,6 +45,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Prevent white flash on page load - ensure dark background immediately */
+html, body, #root {
+  background-color: #111111;
+  margin: 0;
+  padding: 0;
+}
+
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
   width: 10px;
