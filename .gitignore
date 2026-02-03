@@ -43,3 +43,4 @@ lerna-debug.log*
 
 # System files
 Thumbs.db
+/server/Mechanics.db
