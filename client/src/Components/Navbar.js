@@ -1,14 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const prevScrollPos = useRef(0);
 
   // Navigation items for the center section
   const navLinks = [
-    
-    
     { name: 'Services', href: '/services', active: false },
     { name: 'About Us', href: '/about', active: false },
     { name: 'Blogs', href: '/blogs', active: false },
@@ -18,33 +15,27 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
 
-      // Determine scroll direction - expand when scrolling up, shrink when scrolling down
       if (currentScrollPos < 50) {
         // At top of page - always expanded
         setIsScrolled(false);
-      } else if (prevScrollPos > currentScrollPos) {
+      } else if (prevScrollPos.current > currentScrollPos) {
         // Scrolling up - expand navbar
         setIsScrolled(false);
-      } else if (prevScrollPos < currentScrollPos) {
+      } else if (prevScrollPos.current < currentScrollPos) {
         // Scrolling down - shrink navbar
         setIsScrolled(true);
       }
 
-      // Always keep navbar visible
-      setVisible(true);
-
-      setPrevScrollPos(currentScrollPos);
+      prevScrollPos.current = currentScrollPos;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+  }, []);
 
   return (
     <nav
-      className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out ${
-        visible ? 'top-6' : '-top-32'
-      }`}
+      className="fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out top-6"
     >
       <div
         className={`flex items-center bg-[#111113] border border-white/5 shadow-2xl transition-all duration-500 ease-out ${
@@ -66,11 +57,7 @@ const Navbar = () => {
           }`}
         >
           <div className="w-5 h-5 bg-[#FF5C39] rounded-sm flex items-center justify-center flex-shrink-0">
-            {/* Heimdall Power Logo Icon */}
-            <svg width="20" height="20" viewBox="0 0 12 24" fill="none" className="scale-75">
-              <path d="M0.77 3.7C0.016 5.127 0.007 6.54 0.007 6.6L1.229 6.601C1.229 6.589 1.242 5.382 1.875 4.211C2.311 3.403 2.931 2.81 3.727 2.432L3.226 1.35C1.962 1.939 1.212 2.871 0.77 3.7Z" fill="currentColor"/>
-              <path d="M10.487 4.211C11.119 5.382 11.133 6.589 11.133 6.601L12.354 6.6C12.354 6.54 12.346 5.127 11.591 3.7C11.15 2.871 10.399 1.939 9.135 1.35L8.635 2.432C9.431 2.81 10.05 3.403 10.487 4.211Z" fill="currentColor"/>
-            </svg>
+            <span className="text-white font-bold italic text-sm leading-none" style={{ fontFamily: '"Playfair Display", serif' }}>S</span>
           </div>
           <span className="text-white font-medium text-base whitespace-nowrap tracking-tight leading-[1.4em]">
             Shah Automotives

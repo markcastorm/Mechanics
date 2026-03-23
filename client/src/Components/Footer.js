@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   // --- State ---
   const [formData, setFormData] = useState({
     email: '',
@@ -298,14 +301,14 @@ const Footer = () => {
           {/* Other Links */}
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             <li style={{ marginBottom: '1.39vw' }}>
-              <a href="mailto:info@shahautomotives.com" target="_blank" rel="noopener noreferrer" style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)' }}>
+              <span onClick={() => navigate('/contact')} style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)', cursor: 'pointer' }}>
                 Contact Us
-              </a>
+              </span>
             </li>
             <li style={{ marginBottom: '1.39vw' }}>
-              <a href="/terms-of-use" style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)' }}>
+              <span onClick={() => navigate('/terms-of-use')} style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)', cursor: 'pointer' }}>
                 Terms of use
-              </a>
+              </span>
             </li>
           </ul>
         </div>

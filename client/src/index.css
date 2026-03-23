@@ -78,10 +78,9 @@ nav * {
   -ms-user-select: none;
 }
 
-/* Performance optimizations for animations */
-.transition-all,
-.transition-opacity,
-.transition-transform {
+/* Performance optimizations for animations - scoped to avoid breaking fixed positioning */
+.animate-slide-up-in,
+.animate-reveal {
   will-change: transform, opacity;
 }
 

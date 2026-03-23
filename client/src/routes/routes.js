@@ -5,6 +5,7 @@ import Services from "../pages/Services/Services";
 import IndividualService from "../pages/Services/individual-services/individualService";
 import Career from "../pages/career/Career";
 import ComingSoon from "../pages/ComingSoon/ComingSoon";
+import TermsOfUse from "../pages/TermsOfUse/TermsOfUse";
 import LayoutWithPreloader from "../Components/LayoutWithPreloader";
 
 const routes = [
@@ -38,6 +39,10 @@ const routes = [
             {
                 path: '/blogs',
                 element: <ComingSoon pageTitle="Blogs Coming Soon" description="We're building an amazing blog filled with automotive tips, maintenance guides, and industry insights. Stay tuned!" />
+            },
+            {
+                path: '/terms-of-use',
+                element: <TermsOfUse/>
             },
         ]
     }

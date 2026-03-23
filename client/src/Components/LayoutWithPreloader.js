@@ -4,14 +4,13 @@ import Preloader from './Preloader';
 
 const LayoutWithPreloader = () => {
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
-  const [showContent, setShowContent] = useState(false);
+  const [hasSeenPreloader] = useState(() => !!localStorage.getItem('preloaderShown'));
+  const [isLoading, setIsLoading] = useState(!hasSeenPreloader);
+  const [showContent, setShowContent] = useState(hasSeenPreloader);
   const [contentLoaded, setContentLoaded] = useState(false);
 
-  // Show preloader on every page load/reload until content is ready
   useEffect(() => {
-    setIsLoading(true);
-    setShowContent(false);
+    if (hasSeenPreloader) return;
 
     // Wait for window load event (all resources loaded)
     const handleLoad = () => {
@@ -19,7 +18,6 @@ const LayoutWithPreloader = () => {
     };
 
     if (document.readyState === 'complete') {
-      // Already loaded
       setContentLoaded(true);
     } else {
       window.addEventListener('load', handleLoad);
@@ -28,7 +26,7 @@ const LayoutWithPreloader = () => {
     return () => {
       window.removeEventListener('load', handleLoad);
     };
-  }, []);
+  }, [hasSeenPreloader]);
 
   // Scroll to top on route change
   useEffect(() => {
@@ -36,9 +34,8 @@ const LayoutWithPreloader = () => {
   }, [location.pathname]);
 
   const handlePreloaderComplete = () => {
-    // Start showing content immediately as preloader fades
+    localStorage.setItem('preloaderShown', 'true');
     setShowContent(true);
-    // Remove preloader after fade completes
     setTimeout(() => {
       setIsLoading(false);
     }, 700);
