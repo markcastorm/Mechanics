@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 const Team = () => {
   const teamRefs = useRef([]);
@@ -314,11 +315,10 @@ const Team = () => {
         </div>
       </section>
 
-      {/* TEAM MEMBER MODAL */}
-      {selectedMember && (
+      {/* TEAM MEMBER MODAL - Portal to escape transform containing block */}
+      {selectedMember && createPortal(
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center"
-          // CHANGED: Removed blur, changed to dark transparent background for better contrast
           style={{ background: 'rgba(0, 0, 0, 0.4)' }}
           onClick={() => setSelectedMember(null)}
         >
@@ -481,7 +481,8 @@ const Team = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
