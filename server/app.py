@@ -3,15 +3,17 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from flask_migrate import Migrate
 from models import db  # Import db from models
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
 # CORS
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/api/*": {"origins": os.getenv('CORS_ORIGIN', 'http://localhost:3000')}})
 
 # DB Config
-basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'Mechanics.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize DB first
@@ -28,7 +30,7 @@ app.register_blueprint(subscriptions_bp, url_prefix="/api/subscribe")
 def health_check():
     return jsonify({
         'status': 'healthy',
-        'database': 'sqlite',
+        'database': 'postgres',
         'message': 'Mechanic backend is running'
     })
 
