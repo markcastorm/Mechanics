@@ -46,7 +46,7 @@ const Team = () => {
     {
       name: 'John Kamau',
       position: 'Master Mechanic',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop',
+      image: '/TeamPics/team 1.jpeg',
       email: 'john.k@garage.co.ke',
       phone: '+254 712 345 678',
       bio: 'With over 15 years of experience in German automotive engineering, John leads our technical team with precision and unparalleled expertise in engine reconstruction.',

@@ -119,8 +119,8 @@ const LayoutWithPreloader = () => {
         className="transition-all duration-[1200ms] origin-center"
         style={{
           opacity: (showPreloader && !isAnimatingOut) ? 0 : 1,
-          transform: (showPreloader && !isAnimatingOut) ? 'scale(0.92)' : 'scale(1)',
-          filter: (showPreloader && !isAnimatingOut) ? 'blur(10px)' : 'blur(0px)',
+          transform: (showPreloader && !isAnimatingOut) ? 'scale(0.92)' : showPreloader ? 'scale(1)' : 'none',
+          filter: (showPreloader && !isAnimatingOut) ? 'blur(10px)' : showPreloader ? 'blur(0px)' : 'none',
           transitionTimingFunction: 'cubic-bezier(0.76, 0, 0.24, 1)'
         }}
       >
