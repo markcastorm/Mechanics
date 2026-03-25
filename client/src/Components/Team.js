@@ -44,7 +44,7 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: 'John Kamau',
+      name: 'Peter Makeu',
       position: 'Master Mechanic',
       image: '/TeamPics/team 1.jpeg',
       email: 'john.k@garage.co.ke',
@@ -270,7 +270,7 @@ const Team = () => {
 
                   {/* Plus Icon Button */}
                   <span
-                    className="flex items-center justify-center transition-all duration-700 group-hover:bg-[#212121] group-hover:text-white"
+                    className="flex items-center justify-center transition-all duration-700 group-hover:bg-[#212121] group-hover:text-[#d4d4d4]"
                     style={{
                       width: '2.78vw',
                       height: '2.78vw',
@@ -385,7 +385,7 @@ const Team = () => {
                     {selectedMember.position}
                   </span>
                 </div>
-                
+
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedMember(null)}
@@ -427,7 +427,7 @@ const Team = () => {
 
               {/* NEW SECTION: Expertise/Skills (Fills the empty space) */}
               <div className="mb-[2.78vw] mt-[2vw]">
-                <span 
+                <span
                   className="uppercase block"
                   style={{
                     fontSize: '0.83vw',
@@ -440,7 +440,7 @@ const Team = () => {
                 </span>
                 <div className="flex flex-wrap gap-[0.55vw]">
                   {selectedMember.skills && selectedMember.skills.map((skill, i) => (
-                    <span 
+                    <span
                       key={i}
                       style={{
                         fontSize: '0.97vw',
@@ -458,10 +458,10 @@ const Team = () => {
               </div>
 
               {/* Contacts Footer */}
-              <div 
-                className="grid gap-[1.39vw]" 
-                style={{ 
-                  borderTop: '1px solid #eee', 
+              <div
+                className="grid gap-[1.39vw]"
+                style={{
+                  borderTop: '1px solid #eee',
                   paddingTop: '2.08vw',
                   fontFamily: 'AeonikFono-Bold, serif',
                 }}
