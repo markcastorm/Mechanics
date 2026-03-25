@@ -47,7 +47,7 @@ const Team = () => {
       name: 'Peter Makeu',
       position: 'Master Mechanic',
       image: '/TeamPics/team 1.jpeg',
-      email: 'john.k@garage.co.ke',
+      email: 'Peter.makeu@shahauto.co.ke',
       phone: '+254 712 345 678',
       bio: 'With over 15 years of experience in German automotive engineering, John leads our technical team with precision and unparalleled expertise in engine reconstruction.',
       skills: ['Engine Rebuilds', 'German Auto Specialist', 'Performance Tuning', 'Team Leadership']
@@ -389,7 +389,7 @@ const Team = () => {
                 {/* Close Button */}
                 <button
                   onClick={() => setSelectedMember(null)}
-                  className="flex items-center justify-center hover:bg-[#212121] hover:text-white transition-all duration-300"
+                  className="flex items-center justify-center hover:bg-[#212121] hover:text-[#d4d4d4] transition-all duration-300"
                   style={{
                     width: '3.47vw',
                     height: '3.47vw',
