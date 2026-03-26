@@ -47,26 +47,26 @@ const Team = () => {
       name: 'Peter Makeu',
       position: 'Master Mechanic',
       image: '/TeamPics/team 1.jpeg',
-      email: 'Peter.makeu@shahauto.co.ke',
+      email: 'peter.makeu@shahauto.co.ke',
       phone: '+254 712 345 678',
       bio: 'With over 15 years of experience in German automotive engineering, John leads our technical team with precision and unparalleled expertise in engine reconstruction.',
       skills: ['Engine Rebuilds', 'German Auto Specialist', 'Performance Tuning', 'Team Leadership']
     },
     {
-      name: 'Mary Njeri',
+      name: 'David Muia',
       position: 'Service Manager',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop',
-      email: 'mary.n@garage.co.ke',
-      phone: '+254 722 987 654',
+      image: '/TeamPics/Team2.jpeg',
+      email: 'david.muia@shahauto.co.ke',
+      phone: '+254 7xx xxx xxx',
       bio: 'Mary ensures every client receives transparent communication and timely service. Her background in logistics keeps our garage running like a well-oiled machine.',
       skills: ['Client Relations', 'Logistics', 'Workflow Optimization', 'Quality Control']
     },
     {
-      name: 'David Omondi',
+      name: 'Amiri Were',
       position: 'Diagnostic Specialist',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop',
-      email: 'david.o@garage.co.ke',
-      phone: '+254 733 112 233',
+      image: '/TeamPics/Team3.jpeg',
+      email: 'Amir.were@shahauto.co.ke',
+      phone: '+254 7xx xxx xxx',
       bio: 'A certified electrical systems expert, David utilizes state-of-the-art diagnostic tools to identify and resolve complex electronic issues that others miss.',
       skills: ['Advanced Diagnostics', 'ECU Programming', 'Hybrid Systems', 'Electrical Repair']
     },
@@ -74,8 +74,8 @@ const Team = () => {
       name: 'Grace Wanjiku',
       position: 'Parts Coordinator',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop',
-      email: 'grace.w@garage.co.ke',
-      phone: '+254 700 445 566',
+      email: 'grace.w@shahauto.co.ke',
+      phone: '+254 7xx xxx xxx',
       bio: 'Grace manages our extensive inventory of genuine parts, ensuring that whether it is a vintage restoration or a modern repair, we have exactly what is needed.',
       skills: ['Inventory Management', 'Vintage Sourcing', 'Supply Chain', 'Vendor Relations']
     }
