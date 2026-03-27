@@ -226,7 +226,7 @@ const Hero = () => {
                   Call Us
                 </h3>
                 <a
-                  href="tel:+254712345678"
+                  href="tel:+254768425820"
                   style={{
                     fontSize: '1rem',
                     color: '#b0b0b0',
@@ -236,7 +236,7 @@ const Hero = () => {
                   onMouseEnter={(e) => e.target.style.color = '#FF5C39'}
                   onMouseLeave={(e) => e.target.style.color = '#b0b0b0'}
                 >
-                  +254 712 345 678
+                  +254 768 425820
                 </a>
               </div>
 
@@ -358,7 +358,7 @@ const Hero = () => {
                     lineHeight: '1.6'
                   }}
                 >
-                  123 Industrial Area Road, Nairobi, Kenya<br />
+                  South B, Nairobi<br />
                   Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 4:00 PM
                 </p>
               </div>

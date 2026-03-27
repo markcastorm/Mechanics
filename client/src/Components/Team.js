@@ -71,12 +71,12 @@ const Team = () => {
       skills: ['Advanced Diagnostics', 'ECU Programming', 'Hybrid Systems', 'Electrical Repair']
     },
     {
-      name: 'Grace Wanjiku',
+      name: 'Geoffrey Maina',
       position: 'Parts Coordinator',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop',
-      email: 'grace.w@shahauto.co.ke',
+      image: '/TeamPics/Team4.JPG',
+      email: 'geoffrey.maina@shahauto.co.ke',
       phone: '+254 7xx xxx xxx',
-      bio: 'Grace manages our extensive inventory of genuine parts, ensuring that whether it is a vintage restoration or a modern repair, we have exactly what is needed.',
+      bio: 'Geoffrey Maina manages our extensive inventory of genuine parts, ensuring that whether it is a vintage restoration or a modern repair, we have exactly what is needed.',
       skills: ['Inventory Management', 'Vintage Sourcing', 'Supply Chain', 'Vendor Relations']
     }
   ];

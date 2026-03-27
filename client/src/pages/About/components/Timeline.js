@@ -3,32 +3,36 @@ import React, { useState, useEffect, useRef } from 'react';
 // Data for the timeline events. Easy to update.
 const timelineData = [
   {
-    year: '1995',
-    description: 'Shah Automotives opens its doors in Nairobi, starting as a small family-run garage with a vision to provide honest and reliable automotive service.',
-  },
-  {
-    year: '2005',
-    description: 'Expanded our facility and team, adding advanced diagnostic equipment and specialized training programs for our growing team of mechanics.',
-  },
-  {
-    year: '2012',
-    description: 'Achieved ASE certification for all senior mechanics and introduced our comprehensive warranty program, setting new standards for quality in the region.',
-  },
-  {
     year: '2018',
-    description: 'Opened our state-of-the-art service center with 12 bays, modern equipment, and a comfortable customer lounge. Introduced online booking system.',
+    description: 'Shah Automotives is founded in Nairobi by a team of certified automotive professionals with a shared mission deliver workshop-grade expertise with uncompromising honesty.',
+  },
+  {
+    year: '2019',
+    description: 'Grew our specialist team and invested in advanced diagnostic technology, enabling precise multi-brand diagnostics and faster turnaround times for our clients.',
+  },
+  {
+    year: '2020',
+    description: 'Navigated industry challenges while maintaining full operations. Introduced contactless vehicle drop-off, remote diagnostics consultations, and flexible service scheduling.',
   },
   {
     year: '2021',
-    description: 'Launched our eco-friendly initiatives including proper waste disposal, parts recycling program, and investment in energy-efficient workshop equipment.',
+    description: 'Achieved ASE certification across our senior technical team and launched our comprehensive service warranty program raising the bar for quality in Nairobi.',
+  },
+  {
+    year: '2022',
+    description: 'Expanded our South B facility to a full-scale service center with dedicated bays for mechanical, electrical, and bodywork all under one roof.',
+  },
+  {
+    year: '2023',
+    description: 'Launched eco-responsible workshop practices including certified waste disposal, parts recycling, and energy-efficient equipment upgrades across the facility.',
   },
   {
     year: '2024',
-    description: 'Expanded services to include electric vehicle maintenance and diagnostics, staying ahead with the latest automotive technology trends.',
+    description: 'Expanded capabilities to cover hybrid and electric vehicle maintenance, positioning Shah Automotives at the forefront of next-generation automotive servicing in Kenya.',
   },
   {
-    year: '2025+',
-    description: 'Continuing our commitment to excellence with ongoing training, community partnerships, and plans to open a second location to serve more customers across Nairobi.',
+    year: '2025',
+    description: 'Introduced online booking, real-time service tracking, and a dedicated customer portal — making professional car care more accessible and transparent than ever.',
   },
 ];
 
@@ -105,14 +109,14 @@ const Timeline = () => {
             className="opacity-0 translate-y-8 transition-all duration-700 ease-out"
             style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: '600', marginBottom: '1rem', maxWidth: '30ch', margin: '0 auto' }}
           >
-            Three decades of automotive excellence
+            Built by professionals. Driven by precision.
           </h2>
           <p
             ref={descriptionRef}
             className="opacity-0 translate-y-8 transition-all duration-700 ease-out"
             style={{ fontSize: '1.125rem', color: '#b0b0b0', maxWidth: '60ch', margin: '1rem auto 0', transitionDelay: '100ms' }}
           >
-            From a small family garage to Nairobi's trusted automotive service center, we've grown with dedication and expertise.
+            From day one, Shah Automotives was built on certified expertise not shortcuts. Here's how seven years of relentless standards have shaped who we are today.
           </p>
         </div>
 

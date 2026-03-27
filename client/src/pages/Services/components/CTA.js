@@ -55,8 +55,8 @@ const CTA = () => {
         </svg>
       ),
       title: 'Call Us',
-      value: '+254 712 345 678',
-      link: 'tel:+254712345678'
+      value: '+254 768 425820',
+      link: 'tel:+254768425820'
     },
     {
       icon: (
@@ -77,7 +77,7 @@ const CTA = () => {
         </svg>
       ),
       title: 'Visit Us',
-      value: 'Industrial Area Rd, Nairobi',
+      value: 'South B, Nairobi',
       link: '/contact'
     }
   ];
@@ -232,7 +232,7 @@ const CTA = () => {
             Book Service Now
           </a>
           <a
-            href="tel:+254712345678"
+            href="tel:+254768425820"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
