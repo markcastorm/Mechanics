@@ -37,7 +37,7 @@ const Values = () => {
           </div>
           <div className="hidden md:block h-[1px] flex-1 bg-[#333] mx-12 mb-4"></div>
           <div className="text-right">
-             <span className="block text-[#FF5C39] font-mono text-sm mb-1">EST. 2008</span>
+             <span className="block text-[#FF5C39] font-mono text-sm mb-1">EST. 2018</span>
              <span className="block text-white font-mono text-sm">NAIROBI, KENYA</span>
           </div>
         </div>
@@ -118,14 +118,14 @@ const Values = () => {
              <div className="flex-1 relative z-10">
                <h3 className="text-3xl font-bold text-white mb-4">A Culture of Excellence</h3>
                <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                 "At Shah Automotives, our technicians are valued professionals. We provide clean facilities, quality parts, proper diagnostics time, and a team environment where your expertise is respected."
+                 "We don't just fix cars we build careers. Every technician here has room to grow, access to real tools, and the backing of a team that takes quality seriously. If you bring the skill, we bring the opportunity."
                </p>
                <div className="flex items-center gap-4">
                  <div className="w-12 h-12 rounded-full bg-gray-600 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt="Workshop Manager" className="w-full h-full object-cover"/>
+                    <img src="/TeamPics/Team2.jpeg" alt="David Muia" className="w-full h-full object-cover"/>
                  </div>
                  <div>
-                    <p className="text-white font-bold">James M.</p>
+                    <p className="text-white font-bold">David Muia</p>
                     <p className="text-[#FF5C39] text-sm">Service Manager</p>
                  </div>
                </div>
