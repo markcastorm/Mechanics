@@ -44,13 +44,15 @@ const createCustomIcon = () => new L.divIcon({
 });
 
 // --- Data ---
-const locations = [
+const locations =[
   {
     name: 'Main Workshop',
     area: 'South B',
+    // ADDED DESCRIPTION HERE
+    description: 'Located in a bustling commercial hub in Nairobi South, conveniently adjacent to Wilson Airport and major transit routes.', 
     address: 'South B, Nairobi',
-    phone: '+254 712 345 678',
-    coordinates: [-1.3183892, 36.8174934]
+    phone: '+254 768 425820',
+    coordinates:[-1.3183892, 36.8174934]
   }
 ];
 
@@ -68,7 +70,6 @@ const LocationMap = () => {
   const headingRef = useRef(null);
   const containerRef = useRef(null);
 
-  // Fixed the animation logic to properly utilize Tailwind classes
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -111,7 +112,6 @@ const LocationMap = () => {
         >
           
           {/* Left Column: Location Cards */}
-          {/* Added p-2 and -m-2 to prevent shadow clipping on the scrollable container */}
           <div className="lg:col-span-1 flex flex-col gap-5 lg:max-h-[600px] overflow-y-auto hide-scrollbar p-2 -m-2">
             {locations.map((loc, index) => {
               const isActive = activeLocation === index;
@@ -139,6 +139,13 @@ const LocationMap = () => {
                       <div className="w-2.5 h-2.5 rounded-full bg-[#ffd700] animate-pulse mt-1 shadow-[0_0_8px_rgba(255,215,0,0.8)]"></div>
                     )}
                   </div>
+
+                  {/* ADDED DESCRIPTION BLOCK HERE */}
+                  {loc.description && (
+                    <p className={`text-sm mb-5 leading-relaxed ${isActive ? 'text-gray-400' : 'text-gray-500'}`}>
+                      {loc.description}
+                    </p>
+                  )}
 
                   <div className={`space-y-3 mb-6 ${isActive ? 'text-gray-300' : 'text-gray-600'}`}>
                     <div className="flex items-start gap-3">
@@ -177,14 +184,13 @@ const LocationMap = () => {
               zoom={14}
               style={{ height: '100%', width: '100%' }}
               scrollWheelZoom={false}
-              zoomControl={false} // Disable default top-left control
+              zoomControl={false}
             >
               <TileLayer
                 attribution='&copy; <a href="https://carto.com/">CARTO</a>'
                 url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
               />
               
-              {/* Added Zoom control cleanly to the bottom right */}
               <ZoomControl position="bottomright" />
 
               {locations.map((loc, index) => (
