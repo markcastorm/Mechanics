@@ -54,7 +54,7 @@ const Hero = () => {
           <div className="max-w-7xl mx-auto px-6 md:px-10">
             <div className="grid grid-cols-3 gap-4 text-center text-sm md:text-base uppercase tracking-widest text-gray-400 font-light">
               <div className="animate-fade-in-up animation-delay-400">TRUSTED SERVICE</div>
-              <div className="animate-fade-in-up animation-delay-600">SINCE 1995</div>
+              <div className="animate-fade-in-up animation-delay-600">SINCE 2018</div>
               <div className="animate-fade-in-up" style={{ animationDelay: '800ms' }}>YOUR GARAGE</div>
             </div>
           </div>

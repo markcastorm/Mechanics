@@ -287,13 +287,18 @@ const Footer = () => {
           {/* Social Links */}
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             <li style={{ marginBottom: '1.39vw' }}>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)' }}>
+              <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=uddq33i" target="_blank" rel="noopener noreferrer" style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)' }}>
+                instagram
+              </a>
+            </li>
+            <li style={{ marginBottom: '1.39vw' }}>
+              <a href="https://www.fb.com/l/6lp1kJRRR" target="_blank" rel="noopener noreferrer" style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)' }}>
                 facebook
               </a>
             </li>
             <li style={{ marginBottom: '1.39vw' }}>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)' }}>
-                instagram
+              <a href="https://x.com/PeterM96302" target="_blank" rel="noopener noreferrer" style={{ color: '#f3f1e0', textDecoration: 'none', fontFamily: 'AeonikFono-Bold, serif', fontSize: '0.83vw', fontWeight: 700, textTransform: 'uppercase', transition: 'color 0.3s cubic-bezier(0.32, 0.94, 0.6, 1)' }}>
+                twitter
               </a>
             </li>
           </ul>
