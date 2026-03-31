@@ -47,11 +47,10 @@ const createCustomIcon = () => new L.divIcon({
 const locations =[
   {
     name: 'Main Workshop',
-    area: 'South B',
-    // ADDED DESCRIPTION HERE
-    description: 'Located in a bustling commercial hub in Nairobi South, conveniently adjacent to Wilson Airport and major transit routes.', 
-    address: 'South B, Nairobi',
-    phone: '+254 768 425820',
+    area: 'Langata Road', 
+    description: 'Located along Five Star Road in the Nairobi West area, conveniently accessible directly off Langata Road near Wilson Airport.',
+    address: 'Five Star Rd, off Langata Road, Nairobi',
+    phone: '+254 712 345 678',
     coordinates:[-1.3183892, 36.8174934]
   }
 ];
@@ -140,7 +139,7 @@ const LocationMap = () => {
                     )}
                   </div>
 
-                  {/* ADDED DESCRIPTION BLOCK HERE */}
+                  {/* Added Description Text Block */}
                   {loc.description && (
                     <p className={`text-sm mb-5 leading-relaxed ${isActive ? 'text-gray-400' : 'text-gray-500'}`}>
                       {loc.description}
